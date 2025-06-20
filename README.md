@@ -51,27 +51,15 @@ where:
 
 ---
 
-##  Training Objective
 
-The simplified DDPM loss is:
 
-$$
-\mathcal{L} = \mathbb{E}_{z_0, \epsilon \sim \mathcal{N}(0, \mathbf{I}), t} \left[ \left\| \epsilon - \epsilon_\theta(z_t, t, c) \right\|^2 \right]
-$$
-
-with:
-
-$$
-z_t = \sqrt{\bar{\alpha}_t} \cdot z_0 + \sqrt{1 - \bar{\alpha}_t} \cdot \epsilon
-$$
-
----
 
 ## Dataset Processing
 
 - **Dataset**: CelebA (200k+ celebrity face images)
 - **Text Labels**: Generated from facial attributes (e.g., “a person with black hair and sunglasses”)
 - **Preprocessing**: Resize to 64×64, normalize to range \([-1, 1]\)
+
 
 ---
 
